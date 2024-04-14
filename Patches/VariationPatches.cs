@@ -69,7 +69,7 @@ class Patch_VariationSpriteScaler
 [HarmonyPatch(typeof(PlaceObjectSquareDrag), "PlaceObject")]
 class Path_VariationPlacementSpriteScaler
 {
-    public static void Prefix(PlaceObjectSquareDrag __instance, ref GameObject currentObject, ref PlaceableObject placeableObject)
+    public static void Prefix(PlaceObjectSquareDrag __instance, GameObject currentObject, PlaceableObject placeableObject)
     {
         if (!currentObject.TryGetComponent<PlaceableFloor>(out PlaceableFloor plo))
         {

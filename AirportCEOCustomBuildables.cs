@@ -11,10 +11,11 @@ using BepInEx.Configuration;
 namespace AirportCEOCustomBuildables;
 
 [BepInPlugin("org.airportceocustombuidlables.humoresque",  "AirporCEO Custom Buildables", "1.3.0")]
+[BepInDependency("org.airportceomodloader.humoresque")]
 public class AirportCEOCustomBuildables : BaseUnityPlugin
 {
     public static AirportCEOCustomBuildables Instance { get; private set; }
-    public static Harmony Harmony { get; private set; }
+    internal static Harmony Harmony { get; private set; }
     internal static ManualLogSource CBLogger { get; private set; }
     internal static ConfigFile ConfigReference {  get; private set; }
 
@@ -40,7 +41,7 @@ public class AirportCEOCustomBuildables : BaseUnityPlugin
     {
         try
         {
-            Logger.LogInfo("INIT: Setting up creators!");
+            Logger.LogInfo("[Init] Setting up creators!");
             FileManager fileManager = this.gameObject.AddComponent<FileManager>();
             fileManager.SetUp();
 
@@ -60,7 +61,7 @@ public class AirportCEOCustomBuildables : BaseUnityPlugin
 
             fileManager.SetUpBuildableTypes();
             fileManager.SetUpBasePaths();
-            Logger.LogInfo("INIT: Completed creator setup!");
+            Logger.LogInfo("[Init] Completed creator setup!");
         }
         catch (Exception ex)
         {
