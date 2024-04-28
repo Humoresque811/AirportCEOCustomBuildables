@@ -17,7 +17,7 @@ internal class ModLoaderInteractionHandler
         EventDispatcher.NewGameStarted += ModLoader.LoadMods;
         EventDispatcher.EndOfLoad += LoadSubSystem.LoadProccess;
 
-        WatermarkUtils.Register(new WatermarkInfo(PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION, false));
+        WatermarkUtils.Register(new WatermarkInfo("CB", PluginInfo.PLUGIN_VERSION, true));
         SetUpWorkshopInteractions();
         SetUpSaveLoadInteractions();
         AirportCEOCustomBuildables.LogInfo("Completed ModLoader interactions!");

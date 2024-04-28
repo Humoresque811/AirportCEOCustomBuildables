@@ -61,16 +61,16 @@ class BogusInputHelper : MonoBehaviour
 
         if (sprite.texture.width != sprite.texture.height)
         {
-            string message = $"{currentDialog} a texture sprite that is not square, and therefore may be buggy!";
+            string message = $"{currentDialog} a texture sprite that is not square, and therefore may be buggy! Other sizes can work. " +
+                $"This message does not appear to the user for that reason";
             AirportCEOCustomBuildables.Log(message);
-            DialogPanel.Instance.ShowMessagePanel(message);
         }
 
         if (sprite.texture.width != 256)
         {
-            string message2 = $"{currentDialog} a texture sprite that is not 256x256. This size is recomended for preformance/scaling reasons, and therefore may be buggy!";
+            string message2 = $"{currentDialog} a texture sprite that is not 256x256. This size is recomended for preformance/scaling reasons, but other sizes can work. " +
+                $"This message does not appear to the user for that reason";
             AirportCEOCustomBuildables.Log(message2);
-            DialogPanel.Instance.ShowMessagePanel(message2);
         }
     }
 

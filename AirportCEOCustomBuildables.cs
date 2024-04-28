@@ -10,7 +10,7 @@ using BepInEx.Configuration;
 
 namespace AirportCEOCustomBuildables;
 
-[BepInPlugin("org.airportceocustombuidlables.humoresque",  "AirporCEO Custom Buildables", "1.3.0")]
+[BepInPlugin("org.airportceocustombuidlables.humoresque",  "AirportCEO Custom Buildables", "1.3.0")]
 [BepInDependency("org.airportceomodloader.humoresque")]
 public class AirportCEOCustomBuildables : BaseUnityPlugin
 {

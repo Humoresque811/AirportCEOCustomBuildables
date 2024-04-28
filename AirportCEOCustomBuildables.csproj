@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net46</TargetFramework>
     <AssemblyName>AirportCEOCustomBuildables</AssemblyName>
-    <Description>My first plugin</Description>
+    <Description>Mod/Framework for adding new buildables to ACEO</Description>
     <Version>1.3.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
